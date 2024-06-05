@@ -1,0 +1,163 @@
+/* Override css of libraries */
+
+/* Start override ant design */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply !mb-0;
+}
+
+.ant-select-selection-search-input {
+  box-shadow: none !important;
+}
+
+/* Check Button "Batch edit" trong CampaignIntel cần đổi vertical */
+button span.anticon {
+  vertical-align: 0.12em !important;
+}
+
+.ant-radio {
+  @apply top-[0.28em];
+}
+
+.ant-tabs-nav {
+  @apply !mb-0;
+}
+
+.ant-tabs-content-holder {
+  @apply !bg-white !border !border-antTableBorder !border-t-0 !rounded-[2px] !rounded-tl-none;
+}
+
+.ant-table thead tr th.ant-table-cell,
+.ant-modal-header .ant-modal-title,
+.ant-modal-confirm-title,
+.ant-popover .ant-popover-title,
+.ant-collapse:not(.not-custom-header-font) .ant-collapse-header,
+.ant-table-summary {
+  @apply !font-bold;
+}
+
+.ant-table-column-sorter-up,
+.ant-table-column-sorter-down {
+  @apply text-[12px];
+}
+
+.table-expand-icon-mt-3 .ant-table-row-expand-icon {
+  @apply mt-[0.65rem];
+}
+
+.ant-table-filter-trigger {
+  @apply text-[14px] !ml-0;
+}
+
+.ant-table-thead tr th:last-child .react-resizable-handle {
+  @apply w-0;
+}
+
+.ant-tooltip {
+  @apply z-1170 fixed;
+}
+
+.ant-dropdown,
+.ant-select-dropdown,
+.ant-picker-dropdown {
+  @apply z-1140;
+}
+
+/* 
+  Don't override it directly
+  .ant-popover {
+    @apply z-1130;
+  }
+*/
+.ant-popover:has(.popover-in-modal),
+.ant-popover:has(.popover-custom-zIndex) {
+  @apply !z-1130;
+}
+.ant-popover:has(.popover-in-input) {
+  @apply !z-1170;
+}
+
+.ant-notification,
+.ant-message {
+  @apply z-1120 py-2 px-4 text-sm2;
+}
+
+.ant-modal-mask,
+.ant-modal-wrap {
+  @apply z-1110;
+}
+
+.noFooterTimePick .ant-picker-footer {
+  @apply hidden;
+}
+.ant-picker-time-panel-column::-webkit-scrollbar {
+  @apply w-1;
+}
+.ant-picker-time-panel-column::-webkit-scrollbar-track {
+  @apply bg-[#f1f1f1];
+}
+.ant-picker-time-panel-column::-webkit-scrollbar-thumb {
+  @apply bg-[#888] rounded;
+}
+.ant-picker-time-panel-column::-webkit-scrollbar-thumb:hover {
+  @apply bg-[#555];
+}
+
+.custom-modal-error .ant-modal {
+  @apply !max-w-5xl !w-auto;
+}
+
+.ant-message-notice-content {
+  @apply px-3.5 py-1.5;
+}
+
+.ant-btn-primary[disabled]:not(.ant-btn-dangerous) {
+  @apply !bg-antPrimary !border-antPrimary !text-white opacity-60;
+}
+
+.ant-btn-dangerous[disabled] {
+  @apply !bg-antDanger !border-antDanger !text-white opacity-60;
+}
+
+.ant-select-selection-overflow .ant-select-selection-overflow-item {
+  max-width: calc(100% - 70px) !important;
+}
+
+.ant-steps-small .ant-steps-item-icon .ant-steps-icon:not(:has(> span)) {
+  @apply !top-[-1px];
+}
+
+.ant-table-sticky-scroll {
+  @apply hidden;
+}
+
+.custom-btn-outline {
+  @apply text-antPrimary !bg-antPrimary !border-antPrimary !bg-opacity-[.08];
+}
+
+/* End override ant design */
+
+#nprogress .bar {
+  @apply z-1190;
+}
+
+.Toastify__toast-body {
+  word-break: break-word;
+}
+
+.custom-resizable .react-grid-item.react-grid-placeholder {
+  @apply !bg-transparent !opacity-100;
+}
+
+/* https://github.com/react-grid-layout/react-grid-layout/issues/103 */
+.custom-resizable .react-grid-item.cssTransforms {
+  transition-property: none !important;
+}
+
+.react-resizable-handle::after {
+  @apply !w-2.5 !h-2.5 !right-1 !bottom-1;
+}

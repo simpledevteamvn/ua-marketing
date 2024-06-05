@@ -1,0 +1,33 @@
+/* https://leanylabs.com/blog/react-pagespeed-optimizations/ */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=fallback");
+/* @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;500;600;700&display=fallback"); */
+/* @import url("https://fonts.googleapis.com/css2?family=Aleo:wght@400;500;600;700&display=fallback"); */
+/* @import url("https://fonts.googleapis.com/css2?family=Muli:wght@400;500;600;700&display=fallback"); */
+
+@import "react-toastify/dist/ReactToastify.css";
+@import "flag-icons/css/flag-icons.min.css";
+
+/* https://github.com/tailwindlabs/discuss/issues/25 */
+/* https://github.com/ant-design/ant-design/issues/23371 */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import "antd/dist/antd.css";
+
+/* Additional styles */
+@import "additional-styles/utility-patterns.css";
+@import "additional-styles/range-slider.css";
+@import "additional-styles/toggle-switch.css";
+@import "additional-styles/flatpickr.css";
+/* @import "additional-styles/font.css"; */
+@import "additional-styles/theme.css";
+@import "additional-styles/override.css";
+@import "additional-styles/react-grid-layout.css";
+@import "additional-styles/custom.css";
+/*
+@import "react-grid-layout/css/styles.css";
+@import "react-resizable/css/styles.css";
+
+@import "additional-styles/react-grid-layout.css";
+@import "additional-styles/react-resizable.css";
+*/

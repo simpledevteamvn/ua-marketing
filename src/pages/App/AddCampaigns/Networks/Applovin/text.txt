@@ -1,0 +1,34 @@
+Step 1: Nhập thông tin cơ bản:
+# name: String
+# bidType: String ( chọn giá trị từ config - bidTypes)
+# impressionUrl: String ( người dùng tự nhập)
+# clickUrl: String   ( người dùng tự nhập)
+# trackingMethod: String ( chọn giá trị từ config  - tracingMethods )
+
+https://impression.appsflyer.com/com.fc.be.pl.blue.monster?pid=applovin_int&af_siteid={APP_ID}&c={CAMPAIGN_NAME}&af_ad={AD_NAME}&af_ad_type={AD_SIZE}&af_channel={AD_TYPE}&af_c_id={CAMPAIGN_ID}&af_adset=_DEFAULT&af_ad_id={AD_ID}&af_viewthrough_lookback=24h&clickid={DID}&advertising_id={IDFA}&af_ip={IP}
+https://app.appsflyer.com/com.fc.be.pl.blue.monster?pid=applovin_int&af_siteid={APP_ID}&c={CAMPAIGN_NAME}&af_ad={AD_NAME}&af_ad_type={AD_SIZE}&af_channel={AD_TYPE}&af_c_id={CAMPAIGN_ID}&af_adset=_DEFAULT&af_ad_id={AD_ID}&af_click_lookback=7d&clickid={DID}&advertising_id={IDFA}&af_ip={IP}
+
+Step 2:
+# targetLocations: String[]
+# category: String ( chọn giá trị từ config - categories, config có dạng key - value, hiện thị key và gửi value)
+# osVersionMin: String ( chọn từ giá trị config - osVersions)
+
+Step 3:
+* - Default bid ( CPI)
+*   defaultBid: {       ""bid"" : ""0.01""   }
+* - Default bid (ROAS_AD_BASE)
+*   defaultBid: {   ""goal"" : ""10"" }
+
+* - CountriesBid (CPI)
+*   countriesBid : [
+  { ""bid"" : ""0.01"", ""country"" : ""VN""},
+  { ""bid"" : ""0.01"", ""country"" : ""BR""}
+]
+* */
+    
+* - Default budget
+*   defaultBudget: {  ""dailyBudget"" : ""100"" }
+* - Countries budget
+*   countriesBudget : {  ""dailyBudget"" : ""100"",
+*       ""country"" : ""VN"" }
+* */

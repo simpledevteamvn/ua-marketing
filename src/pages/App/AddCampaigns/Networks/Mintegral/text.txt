@@ -1,0 +1,34 @@
+### Create campaign:
+* networkConnectorId: String
+// rawAppId là id bên network 
+// -> duy nhất trên mỗi network nhưng có thể trùng nhau giữa các network => dùng field khác làm id
+* rawAppId: String
+- Step1: required all
+* name: String
+* bidType: String ( giá trị bid lấy từ config: bidTypes)
+* timeZone: Chọn giá trị từ config: "timeZone", hiển thị key và gửi value
+* startTime: yyyy-MM-dd
+* endTime
+- Step2:
+* networks: String[] ( lấy các select từ config -networks)
+* required - targetLocations: String[] ( danh sách các geo)
+* targetDevice: String[]  ( lấy các select từ config - targetDevices )
+* osVersionMin: String (lấy từ config dang key-value, hiện thị key và gửi value)
+* osVersionMax: String (lấy từ config dang key-value, hiện thị key và gửi value)
+- Step3:
+* required - dailyCapType: String ( lấy giá trị từ config - dailyCapTypes ) -> hiện auto truyền "BUDGET"
+* defaultBid(object: điền thông tin: bid) + countriesBid ( có thể có country bid hoặc không - tức là tồn tại cả default bid và country)
+* defaultBudget (điền thông tin totalBudget / dailyBudget - dể null nếu đó là open budget ( giống trên web ))
+* ->Country budget có 2 chế độ: (tham khảo giao diện của Mintegral để clear)
+* - sharedBudgets: có thể chọn nhều country cho 1 budget ( điển vào trường: "countries" )
+* - separatedBudget: mỗi country có 1 budget ( điền vào trường : "country")
+"defaultBid": {"bid": "0.01"},
+"countriesBid": [{ "bid": "0.01",  "country": "VN" }],
+- Step4:
+* required - creatives: list creatives chọn từ kho creative
+* object creative: {
+*   name: String,
+*   md5: String,
+*   geos: String[] ( các geo ở đây chỉ được chọn từ các geo ở targetLocations
+*   creativeSetName: String ( trường này có thể điền hoặc không
+* required - targetAdType: chọn giống trên giao diện( các giá trị lấy từ config)

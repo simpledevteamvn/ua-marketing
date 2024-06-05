@@ -1,0 +1,316 @@
+/* Thêm các styles (tự viết) được dùng chung cho hệ thống */
+.form-input:focus,
+.form-textarea:focus,
+.form-multiselect:focus,
+.form-select:focus,
+.form-checkbox:focus,
+.form-radio:focus {
+  @apply ring-0;
+}
+
+.btn-primary {
+  @apply btn text-white bg-indigo-600 hover:bg-indigo-700 disabled:opacity-60;
+}
+.btn-light {
+  @apply btn text-black bg-white hover:bg-slate-50/60 border !border-gray-300 disabled:!border-gray-400 disabled:opacity-20;
+}
+.btn-info {
+  @apply btn bg-blue-100 text-blue-900 hover:bg-blue-200;
+}
+.btn-dark {
+  @apply btn bg-gray-900 bg-opacity-70 text-white hover:bg-opacity-80;
+}
+.btn-danger {
+  @apply !bg-red-500 hover:!bg-red-600 !border-red-500 !text-white disabled:opacity-60;
+}
+
+.btn-outline-primary {
+  @apply btn text-indigo-600 border !border-indigo-600 disabled:opacity-60;
+}
+
+.btn-lg {
+  @apply px-4 py-3;
+}
+
+.btn-sm {
+  @apply px-2 py-1;
+}
+
+.btn-xs {
+  @apply px-2 py-0.5;
+}
+
+.custom-btn-light {
+  @apply btn-light btn-sm focus:ring-1 focus:!border-blue-400 focus:ring-blue-400;
+}
+
+.custom-btn-outline-primary {
+  @apply !bg-white !text-antPrimary !border-antPrimary hover:!text-antPrimary/80 hover:!border-antPrimary/80;
+}
+
+.btn-light.icon {
+  @apply !border-0 !shadow-none hover:bg-slate-200/60 focus:bg-slate-200/60;
+}
+
+.ant-btn:has(.anticon.custom-btn-padding) {
+  @apply pl-2.5;
+}
+span.anticon.custom-btn-padding + span {
+  /* dấu MoreOutlined (dấu ba chấm) ko cần nhiều padding */
+  @apply ml-1;
+}
+
+.input-light {
+  @apply bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded focus:ring-indigo-600 focus:border-indigo-600 block w-full p-2.5 disabled:bg-gray-200 disabled:bg-opacity-60 disabled:cursor-not-allowed;
+}
+
+.input-light-antd {
+  @apply focus:border-antPrimary !ring-0;
+}
+.input-number-center .ant-input-number-input {
+  @apply text-center;
+}
+.custom-input-rounded .ant-select-selector {
+  @apply !rounded-[3px];
+}
+
+.page-bg {
+  /* https://cssgradient.io/gradient-backgrounds/ */
+  background-image: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%);
+}
+
+.page-wrapper {
+  @apply basis-full md:basis-7/12 flex flex-col items-center justify-center mx-auto min-h-screen px-4 py-6 xs:px-6 xs:py-8 pb-8 md:!pb-28;
+}
+
+.page-content {
+  @apply w-full bg-white rounded-lg shadow md:mt-0 sm:max-w-md xl:p-0;
+}
+
+.page-content-padding {
+  @apply p-4 xs:p-6 space-y-4 md:space-y-6 sm:p-8;
+}
+
+.page-title {
+  @apply text-2xl sm:text-3xl text-slate-800 font-semibold;
+}
+
+.page-filter {
+  @apply mt-4 bg-white pb-4 pt-2 px-3 2xl:px-2 flex items-center flex-wrap;
+}
+
+.page-filter .filter-item {
+  @apply !mt-2 !mx-1 2xl:!mx-2;
+}
+
+.tab-title {
+  @apply text-xl sm:text-2xl text-slate-800 font-semibold;
+}
+.tab-filter {
+  @apply flex items-center flex-wrap -mx-1 2xl:-mx-2;
+}
+.tab-filter .filter-item {
+  @apply !mt-2 !mx-1 2xl:!mx-2;
+}
+
+.page-section {
+  @apply text-lg text-slate-800 font-semibold mb-3 mt-4;
+}
+
+.page-section-multi {
+  @apply p-6 bg-white rounded border;
+}
+
+.page-breadcrum {
+  @apply px-4 sm:px-6 lg:px-8 py-4 border-b flex items-center justify-between;
+}
+
+.overview-section {
+  @apply flex flex-col col-span-full sm:col-span-6 bg-white shadow-lg rounded-sm border border-slate-200;
+}
+
+.overview-section .section-header {
+  @apply flex items-center justify-between px-5 py-4 border-b border-slate-100;
+}
+
+.modal-label {
+  @apply text-sm font-medium text-gray-900 mt-4 mb-2;
+}
+
+.actived-dot {
+  @apply bg-green-600 w-1 h-1 rounded-full ml-1 flex-shrink-0;
+}
+
+.text-link {
+  @apply text-antPrimary hover:text-antPrimary/80 cursor-pointer;
+}
+
+.table-cell-bg {
+  @apply !p-0 !border-antTableBorder relative bg-sky-100;
+}
+
+.ant-table .table-cell-padding {
+  @apply px-4;
+}
+
+.ant-table.ant-table-small .table-cell-padding {
+  @apply px-2;
+}
+
+.ant-table .custom-row-hover:hover {
+  @apply font-bold;
+}
+
+.ant-table .custom-row-hover:hover td {
+  box-shadow: inset 0 2px 2px -1px #0a6cff, inset 0 -3px 2px -2px #0a6cff;
+  @apply !border-x-0;
+}
+
+.upload-small .ant-upload-btn {
+  @apply !pt-0 !pb-1;
+}
+
+.tooltip-light .ant-tooltip-inner {
+  @apply !text-black;
+}
+
+.ant-popover-content:has(.popover-without-arrow) .ant-popover-arrow {
+  @apply !hidden;
+}
+
+.ant-popover-content:has(.popover-custom-border) .ant-popover-inner {
+  @apply !rounded-md shadow border;
+}
+
+.ant-skeleton-bg-white {
+  @apply after:!bg-gray-100/30;
+}
+
+.popover-custom-height {
+  max-height: calc(100vh - 80px) !important;
+  overflow-y: auto;
+}
+.ant-popover-inner-content:has(.popover-custom-padding) {
+  @apply p-2 sm:p-4;
+}
+
+.custom-dropdown-size .ant-dropdown-menu-item-group-list li {
+  @apply py-0.5;
+}
+.custom-dropdown-size .ant-dropdown-menu {
+  @apply pb-1.5;
+}
+
+.form-filter-left {
+  @apply col-span-full md:col-span-3 2xl:col-span-2 text-base font-semibold;
+}
+.form-filter-left.large {
+  @apply md:col-span-4 2xl:col-span-3;
+}
+
+.form-filter-right {
+  @apply col-span-full md:col-span-9 2xl:col-span-10;
+}
+.form-filter-right.large {
+  @apply md:col-span-8 2xl:col-span-9;
+}
+
+/* .form-label-multi-line .ant-col.ant-form-item-label {
+  @apply flex items-center;
+}
+.form-label-multi-line .ant-form-item-label label {
+  @apply h-auto whitespace-normal;
+} */
+
+.ant-form-item.required-label .ant-form-item-control-input {
+  @apply min-h-0;
+}
+
+.dynamic-filters {
+  @apply flex items-start xs:items-center flex-col xs:flex-row space-y-1 xs:space-y-0 xs:space-x-1;
+}
+
+.react-resizable {
+  position: relative;
+  background-clip: padding-box;
+}
+
+.react-resizable-handle {
+  position: absolute;
+  right: -5px;
+  bottom: 0;
+  z-index: 1;
+  width: 10px;
+  height: 100%;
+  cursor: col-resize;
+}
+
+.table-full-screen {
+  @apply fixed top-0 left-0 bottom-0 right-0 z-1100 bg-white p-5 pt-3 m-0 overflow-y-auto;
+}
+
+.custom-mask .ant-table-container {
+  mask-image: linear-gradient(180deg, #000 98%, transparent);
+}
+
+.custom-mask .ant-table-container tbody tr:last-child td {
+  @apply !border-b !border-slate-500;
+}
+
+.icon-danger {
+  @apply !text-red-400 hover:!text-red-500;
+}
+
+.dashed-icon {
+  @apply border border-antBorder border-dashed rounded-full p-1 !text-black hover:border-antPrimary hover:!text-antPrimary transform ease-in duration-150;
+}
+
+.dashed-icon.disabled {
+  @apply !cursor-not-allowed !text-black/40 hover:!text-black/40 hover:!border-antBorder;
+}
+
+.ant-input-number-group-addon:has(> .custom-addon-right) {
+  @apply border-r-0 rounded-none;
+}
+
+.tree-indent-sm .ant-tree-indent-unit {
+  @apply w-4;
+}
+.tree-indent-sm .ant-tree-indent-unit::before {
+  @apply right-0;
+}
+.tree-indent-sm .ant-tree-treenode-leaf-last .ant-tree-indent-unit::before {
+  @apply bottom-1;
+}
+.ant-tree-treenode-selected .custom-tree-bg {
+  @apply !bg-transparent;
+}
+
+.remaining-time-statistic .ant-statistic-content {
+  @apply !text-sm text-indigo-600/60;
+}
+
+.MenuMobile .ant-drawer-content {
+  /* Header height = 64px */
+  @apply !pt-16 bg-slate-800;
+}
+
+.MenuMobile .ant-drawer-content-wrapper {
+  @apply !w-64;
+}
+
+.custom-addon-min-width .ant-input-number-group-addon {
+  @apply !min-w-[36px] !m-auto;
+}
+
+.custom-scroll::-webkit-scrollbar {
+  @apply !w-2.5 !h-2.5;
+}
+
+.custom-scroll::-webkit-scrollbar-track {
+  @apply !bg-[#f1f1f1] rounded-[5px];
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+  @apply !bg-[#a1a1aa] rounded-[5px];
+}
